@@ -88,6 +88,7 @@ func (sdc *StackdriverClient) Send(gwm GatewayMessage) error {
 	if err != nil {
 		return err
 	}
+	defer res.Body.Close()
 
 	if (res.StatusCode > 201) || (res.StatusCode < 200) {
 		return fmt.Errorf("Stackdriver API Connection Error StatusCode[%d]", res.StatusCode)
