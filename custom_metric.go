@@ -35,7 +35,7 @@ type Metric struct {
 	// Custom metrics not associated with an instance id will be found under the Custom resource type when creating
 	// charts or alerting policies.
 	// [Optional]
-	InstanceId string `json:"instance_id,omitempty"`
+	InstanceId string `json:"instance,omitempty"`
 }
 
 type GatewayMessage struct {
